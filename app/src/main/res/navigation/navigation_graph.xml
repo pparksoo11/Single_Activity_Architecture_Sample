@@ -10,7 +10,9 @@
         android:label="IntroFragment" >
         <action
             android:id="@+id/action_introFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -18,7 +20,9 @@
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_webViewFragment"
-            app:destination="@id/webViewFragment" />
+            app:destination="@id/webViewFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"

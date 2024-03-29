@@ -47,7 +47,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
         settingRepoRecyclerView()
 
-        repositoryViewModel.getRepository("dustntn11") //git user Name
+        repositoryViewModel.getRepository("pparksoo11") //git user Name
     }
 
     override fun observeViewModel() {
