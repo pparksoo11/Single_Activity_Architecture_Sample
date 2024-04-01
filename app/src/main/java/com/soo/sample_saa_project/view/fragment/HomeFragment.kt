@@ -33,18 +33,6 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun initView() {
         super.initView()
 
-        // 뒤로가기 로직 처리(없다면 홈으로 이동됨)
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
-            if(backPressedTime + 2000 > System.currentTimeMillis()) {
-                requireActivity().finish()
-            } else {
-                Toast.makeText(requireContext(), "뒤로가기 두번 클릭 시 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
-            }
-            backPressedTime = System.currentTimeMillis()
-        }
-
-        callback.isEnabled = true
-
         settingRepoRecyclerView()
 
         repositoryViewModel.getRepository("pparksoo11") //git user Name
